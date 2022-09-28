@@ -134,3 +134,11 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'allopsweb@gmail.com'
 EMAIL_HOST_PASSWORD = 'igtezzqiputbksdo'
 EMAIL_USE_TLS = True
+
+#heroku host configure
+ALLOWED_HOSTS = [
+    '*',
+    '0.0.0.0',
+    'allops.herokuapp.com',
+    '127.0.0.1'
+]
