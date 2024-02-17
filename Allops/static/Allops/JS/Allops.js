@@ -6,6 +6,18 @@ document.addEventListener('DOMContentLoaded',()=>{
             e.preventDefault();
             save_it(this);
         };
+    const form = document.getElementById("mc-embedded-subscribe-form");
+    const button = document.getElementById("mc-embedded-subscribe");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Change button text to "Subscribed successfully"
+        button.innerText = "Subscribed successfully";
+
+        // Add a class to apply styling for success
+        button.classList.add("subscribed");
+    });
 });
     //Selects every save button of opportunity card and calls share_id function.
     document.querySelectorAll('.fa-share-alt').forEach(div => {

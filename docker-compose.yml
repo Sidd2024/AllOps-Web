@@ -1,0 +1,28 @@
+version: '3.9'
+
+services:
+  django:
+    image: allops:latest
+    ports:
+      - 8000:8000
+    networks:
+      - mynetwork
+    depends_on:
+      - db
+
+  db:
+    image: postgres:latest
+    # command: >
+    #   sh -c "python manage.py makemigrations && python manage.py migrate &&
+    #          python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=myuser
+      - POSTGRES_PASSWORD=mypassword
+      - POSTGRES_DB=mydb
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:

@@ -1,0 +1,56 @@
+{% extends "Allops/layout.html" %}
+{% block body %}
+
+    </style>
+    <div class="card-container">
+      <div class="card">
+        <h1>AllOps</h1>
+        <!-- <h2>Coming soon...</h2> -->
+        <p>
+          Don't miss our launch, get notified for every opportunity you are
+          interested in!
+        </p>
+        <p>
+          <small
+            >We don't share your email with any third-party companies,
+            promise!</small
+          >
+        </p>
+        <form
+          action="#"
+          method="post"
+          id="mc-embedded-subscribe-form"
+          name="mc-embedded-subscribe-form"
+          class="validate"
+          novalidate
+        >
+          <input
+            type="email"
+            value=""
+            name="EMAIL"
+            class="email"
+            id="mce-EMAIL"
+            placeholder="Your email"
+            required
+          />
+          <div style="position: absolute; left: -5000px" aria-hidden="true">
+            <input type="text" name="" tabindex="-1" value="" />
+          </div>
+          <div class="clear"></div>
+          <button
+            name="subscribe"
+            id="mc-embedded-subscribe"
+            class="button"
+            type="submit"
+          >
+            <a href=""></a>Subscribe me
+          </button>
+        </form>
+        <div class="pricing">
+          <p id="one">₹99/month</p>
+          <p id="two">Early bird offer - ₹0.00</p>
+        </div>
+      </div>
+    </div>
+
+{% endblock body %}

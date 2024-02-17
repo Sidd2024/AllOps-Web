@@ -97,6 +97,90 @@
     flex-direction: column !important;
   }
 }
+/* subscribe page */
+
+.card-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.card {
+  display: block;
+  position: relative;
+  width: 480px;
+  max-width: 90%;
+  min-height: 12em;
+  background: #1b1f3b;
+  color: #ffffff;
+  padding: 1em 2em 2em;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.card h1 {
+  font-family: "Dosis", sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+.card form {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.card form input {
+  display: flex;
+  width: 80%;
+}
+
+.card form input.email {
+  border: 0px;
+  margin-bottom: 1em;
+  padding: 0.3em 1em;
+  text-align: center;
+  font-family: monospace;
+  font-size: 24px;
+  line-height: 30px;
+  outline: none !important;
+  border-radius: 5px;
+  background-color: #f1fffa;
+}
+
+.card form button {
+  border: 0px transparent;
+  padding: 1em 1.2em;
+  border-radius: 5px;
+  background-color: #ee6055;
+  color: #1b1f3b;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.4s all ease-in-out;
+  cursor: pointer;
+}
+
+.card form button:hover {
+  background-color: #f17c73;
+}
+
+#one {
+  text-decoration: line-through solid #e34e03;
+  font-size: 25px;
+}
+
+#two {
+  font-size: 30px;
+}
+
+.card form button.subscribed {
+  background-color: #5cb85c; /* Green */
+  color: white;
+}
 
 /* Navbar, body, button and links*/
 .navbar-brand {

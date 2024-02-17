@@ -38,7 +38,7 @@ my_types = (
     ('Program','Program'),
     ('Course','Course')
 )
-
+       
 class User(AbstractUser):
     pass
 
@@ -48,12 +48,12 @@ class opportunity(models.Model):
     details = models.TextField(blank=False, default='head over to official link for more details!')
     image = models.URLField(blank=True)
     link = models.URLField(blank=False)
-    start = models.DateField(blank=False)
+    start = models.DateField(blank=False)                   
     end = models.DateField(blank=True)
-    interest = MultiSelectField(choices = my_fields)
+    interest = MultiSelectField(choices=my_fields, max_length=len(my_fields))
     location = models.CharField(max_length=64, default='virtual')
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="owner")
-    time = models.DateTimeField(auto_now_add=True)
+    time = models.DateTimeField(auto_now_add=True,blank=True)
     type = models.CharField(choices=my_types, blank=False,max_length=20, default='Program')
     featured = models.BooleanField(default=False)
 
@@ -67,7 +67,7 @@ class save(models.Model):
 class mails(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="mail_user",blank=False)
     mail_id = models.EmailField(blank=False)
-    fields = MultiSelectField(choices=my_fields)
+    fields = MultiSelectField(choices=my_fields, max_length=len(my_fields))
     
     def __str__(self):
         return (f"{self.user}:  {self.mail_id}.")

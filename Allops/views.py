@@ -410,3 +410,6 @@ def validate_mail(request):
         return render(request, "Allops/validate.html",{
             "form": form
         })
+
+def subscribe(request):
+    return render(request,"Allops/subscribe.html")
