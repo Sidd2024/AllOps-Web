@@ -84,7 +84,7 @@ DATABASES = {
     'NAME': 'allops',
     'USER': 'sid',
     'PASSWORD': '$idd2415',
-    'HOST': 'https://kt21wv3x-8000.inc1.devtunnels.ms/',
+    'HOST': 'localhost',
     'PORT': '5432'
     }
 }
